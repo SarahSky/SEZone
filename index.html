@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title> تخمين الكلمات </title>
+
+  <meta name="description" content="hangman game, arabic hangman, learn Arabic, game">
+  <meta name="author" content="Sarah Alsubhi">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/jquery.multiselect.css">
+  <link rel="stylesheet" href="css/jquery.stackbox.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="sezone-logo.png">
+
+</head>
+<body>
+    
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container centric game">
+    
+	<div class="row header" style="margin-top: 2%">
+        <img src="sezone-logo.png" width="70" hight="70">
+		<h1> تخمين الكلمات</h1>
+		<!--<h4>the Arabic Hangman Game for learners</h4>-->
+	</div>
+
+	<div class="row" style="margin-top: 3%">
+		<div class="six columns">
+			<span class="selector">الفئات</span> <select multiple="multiple" id="categories"></select>
+		</div>	
+		<div class="six columns right">
+			<span class="selector">المستوى</span> <select id="levels"></select>
+		</div>
+	</div>
+
+	<div class="row core centric" style="margin-top: 2%">
+		<p class="note" id="catagoryName"></p>
+		<div class="">
+			<canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+		</div>
+		<div class="">
+			<div id="hold" dir="rtl"> </div>
+			<p id="mylives"></p>
+			<p id="clue"></p>
+		</div>
+		<div class="" id="keyboard">
+			<div id="buttons" dir="rtl"></div>
+		</div>
+	</div>  
+
+	<div class="row centric">
+		<div class="control">
+			<button id="hint">تلميح</button>
+			<button id="reset">اللعب مرة أخرى</button>
+			<button id="howtoplay" onclick="" 
+			href="#howtoplaybox" data-stackbox-close-button="false" data-stackbox-width="400" data-stackbox="true" data-stackbox-position="bottom" data-stackbox-anim-open="bounceInUp slow" data-stackbox-anim-close="hinge slow">طريقة اللعب!</button>
+		</div>
+		<div id="howtoplaybox" style="display:none;">
+			<div class="stackbox-body">استخدم لوحة المفاتيح العربية أو الحروف الأبجدية أدناه لتخمين الكلمة، أو انقر فوق تلميح للحصول على دليل.</div>
+		</div>
+	</div>
+
+	<div class="row footer" style="margin-top: 5%">
+	    <p>مدرسة متوسطة وثانويةالمعقص  © ٢٠٢٤</p>
+	</div>
+	
+</div>
+
+	<audio id="play" src="rsc/button.mp3"></audio>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.multiselect.js"></script>
+	<script src="js/jquery.stackbox.min.js"></script>
+	<script src="data.js"></script>
+	<script src="js/index.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
